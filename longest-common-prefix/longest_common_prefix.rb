@@ -1,4 +1,7 @@
 def longest_common_prefix(strs)
+  return "" if strs == []
+  return strs.first if strs.length == 1
+
   longest = ""
   strs[0].chars.each_with_index do |char, idx|
     if strs.all? { |str| str[idx] == char }
